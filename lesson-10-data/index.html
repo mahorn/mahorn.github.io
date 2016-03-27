@@ -1,32 +1,157 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    
 <meta charset="utf-8">
-<title>MAP672 Portfolio Example</title>
-
+<title>Maria Renee Horn's MAP672 Portfolio</title>
 <meta name=‘viewport’ content=‘initial-scale=1,maximum-scale=1,user-scalable=no’ />
-
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
+<link href='http://fonts.googleapis.com/css?family=Imprima' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+    
 <style>
     
-/* CSS style rules go here! */   
-
+    body {
+        background: #000000;
+        font-family: Imprima, sans-serif;
+    }
+    header { 
+        width: 100%;
+        min-width: 800px;
+        margin: 0 auto;
+        background: #CFDB31;
+        padding: 20px 0 25px;
+    }
+    footer { 
+        width: 100%;
+        min-width: 800px;
+        margin: 0 auto;
+        background: #CFDB31;
+        padding: 20px 0 20px;
+    }
+    h1 { 
+        font-family: Dosis, sans-serif;
+        color: #CFDB31; 
+        width: 80%;
+        margin: 0 auto;
+        color: #9F4298;
+    }
+    h2 { 
+        font-family: Dosis, sans-serif;
+        color: #E0E7E9;
+        width: 80%;
+        margin: 0 auto;
+        color: #9F4298;
+    }
+    h3 {
+        font-family: Dosis, sans-serif;
+        color: #666362
+    }
+    p { 
+        font-size: .9em; 
+        color: #666362;
+        line-height: 1.4em 
+    }
+    ul {
+        list-style-type: none; 
+        font-size: .8em; 
+        color: #CFDB31; 
+        line-height: 1.9em;
+    }
+    a, a:visited {   
+        color: #9F4298;
+    }
+    .project {
+        width: 80%;
+        min-width: 800px;
+        height: 100%;
+        margin: 35px auto;
+    }
+    .project:after{
+        content: "";
+        display: table;
+        clear: both; 
+    }
+    .project-image {
+        width: 388px;
+        height: 240px;
+        background: white;
+        float: left;
+        margin-right: 20px;
+        border: 1px solid #666362;
+    } 
 </style>
-</head>
-
+    
+</head>  
 <body>
+    
 <header>
     <h1>Maria Renee Horn</h1>
     <h2>Web Cartography at the University of Kentucky</h2>
-    <section>
-        <a href="Maps/Electric-Power-Generation.pdf"><img src="images/Electric%20Power%20Generation.png" alt="map of power generation"/></a>
-        <h3><a href="Maps/Electric-Power-Generation.pdf">United States Electric Power Generation</a></h3>
-        <p>This map ..... </p>
-        <p>This map ......</p>
+</header>
+    
+    <section class="project">
+        <a href="maps/power.pdf"><img src="images/Electric%20Power%20Generation.png" alt="map of power generation"              class="project-image"/></a>
+        <h3><a href="maps/power.pdf">United States Electric Power Generation</a></h3>
+        <p>This map shows Hydro, Petroleum and Solar electric power generation across the United States.</p>
+        <p>Upon clicking on the map, you will see all the electric power plants within 500 km and the area will be highlighted. Information regarding individual plants like its name, capacity in Megawatts and its distance from the plant to the click point will be also available.</p>
+        <p>It was built using custom JavasCript code drawing upon the Leaflet JavaScript Library.</p>
         <ul>
-            <li>See the map: <a href="Maps/Electric-Power-Generation.pdf">United States Electric Power Generation</a></li>
+            <li>See the map: <a href="maps/power.pdf">United States Electric Power Generation</a></li>
             <li>Data Source: <a href="https:www.eia.gov/electricity/data/eia923/">U.S Energy Information Administration</a></li>
         </ul>
     </section>
-</header>
+    
+    <section class="project">
+        <a target = '_blank' href="https://macaraya.cartodb.com/viz/d01ee746-a529-11e5-82fd-0ecfd53eb7d3/map"><img              src="images/eBird.png" alt="map of KY eBird" class="project-image"/></a>
+        <h3><a target = '_blank' href="https://macaraya.cartodb.com/viz/d01ee746-a529-11e5-82fd-0ecfd53eb7d3/map">Kentucky eBird Observations and Audubon Important Bird and Biodiversity Areas, 2014</a></h3>
+        <p>This Map shows bird observations of Kentucky Imperiled/Vulnerable species from 2014 eBird   observation records. Kentucky and Global ranking statuses were obtained from the Kentucky State Nature Preserve Commission's published county records (http://naturepreserves.ky.gov/pubs/Pages/cntyreport.aspx).</p>
+        <p>The eBird observation records were obtained in May 2015 from Cornell's eBird website. Species without special State or Global ranking status were excluded from the analysis.</p>
+        <p>This map was generated in QGIS using CartoDB CSS styles.</p>
+        <ul>
+            <li>See the map: <a target = '_blank' href="https://macaraya.cartodb.com/viz/d01ee746-a529-11e5-82fd-0ecfd53eb7d3/map">Kentucky eBird Observations and Audubon Important Bird and Biodiversity Areas, 2014</a></li>
+            <li>Data Source: <a target = '_blank' href="http://naturepreserves.ky.gov/pubs/Pages/cntreport.aspx">Nature Preserve</a></li>
+        </ul>
+    </section>
+    
+    <section class="project">
+        <a target = '_blank' href="https://macaraya.cartodb.com/viz/5d6a9402-9a20-11e5-bb29-0ecd1babdde5/map"><img              src="Images/Gas%20Emissions.png" alt="map of greenhouse gas emissions" class="project-image"/></a>
+        <h3><a target = '_blank' href="https://macaraya.cartodb.com/viz/5d6a9402-9a20-11e5-bb29-0ecd1babdde5/map">2014 Greenhouse Gas Emissions from Large Facilities</a></h3>
+        <p>Emissions of Carbon Dioxide by State and Industry</p>
+        <p>This data set does not reflect total U.S. GHG emissions. Data report to EPA as of 08/16/2015.</p>
+        <p>It was created in QGIS using CartoDB CSS styles.</p>
+        <ul>
+            <li>See the map: <a target = '_blank' href="https://macaraya.cartodb.com/viz/5d6a9402-9a20-11e5-bb29-0ecd1babdde5/map">2014 Greenhouse Gas Emissions from Large Facilities</a></li>
+            <li>Data Source: <a target = '_blank' href="http://ghgdata.epa.gov/ghgp/main.do">United States Environmental Protection Agency (EPA)</a></li>
+        </ul>
+    </section>
+    
+     <section class="project">
+        <a target = '_blank' href="https://macaraya.cartodb.com/viz/04849244-96a0-11e5-b7dc-0e31c9be1b51/map"><img              src="images/Cancer%20Incidence.png" alt="map of cancer incidence" class="project-image"/></a>
+        <h3><a target = '_blank' href="https://macaraya.cartodb.com/viz/04849244-96a0-11e5-b7dc-0e31c9be1b51/map">Cancer Incidence in the United States</a></h3>
+        <p>This map shows the average incidence rate per 100,000 people, average from 2008 - 2012.</p>
+        <p>Data were downloaded from the 
+National Cancer Institute on 11/13/12015. The data describe cancer rates for all cancer sites by mortality, for all races, sexes, and ages, averaged over the years of 2008 - 2012.</p>
+         <p>This map was generated in QGIS using CartoDB CSS styles.</p>
+        <ul>
+            <li>See the map: <a target = '_blank' href="https://macaraya.cartodb.com/viz/04849244-96a0-11e5-b7dc-0e31c9be1b51/map">Cancer Incidence in the United States</a></li>
+            <li>Data Source: <a target = '_blank' href="http://www.nih.gov/about-nih/what-we-do/nih-almanac/national-cancer-institute-nci">National Cancer Institute</a></li>
+        </ul>
+    </section>
+    
+     <section class="project">
+        <a href="maps/stops.pdf"><img src="images/Bus%20Stops.png" alt="map of bus stops" class="project-image"/></a>
+        <h3><a href="maps/stops.pdf">San Francisco's Bus Stops</a></h3>
+        <p>This map shows the bus stops in San Francisco, California with a half-mile buffer distance. </p>
+        <p>It was created with QuickOSM plugin using data from OpenStreetMap and SF OpenData, both QGIS projects.</p>
+        <ul>
+            <li>See the map: <a href="maps/stops.pdf">San Francisco's Bus Stops</a></li>
+            <li>Data Source: <a href="https://data.sfgov.org/Transportation/SFMTA-routes-and-stops-for-March-2012/f5c3-8kkj">SFGOV Transportation</a></li>
+        </ul>
+    </section>
+    
+<footer></footer>    
+
 </body>
 </html>
